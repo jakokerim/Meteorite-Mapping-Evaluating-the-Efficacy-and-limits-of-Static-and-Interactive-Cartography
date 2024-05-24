@@ -28,3 +28,9 @@ def generate_meteorite_map(df_filtered):
         ).add_to(marker_cluster)
 
     return m
+# Explanation : Loop Through DataFrame: The function iterates over each row in the DataFrame df_filtered using iterrows().
+# Popup Text:
+#    For each row, it constructs a string popup_text that includes the meteorite's name, classification group, mass, and year.
+# Add Marker:
+#    A folium.Marker is created for each meteorite, using its latitude (reclat) and longitude (reclong) for the location.
+#    The marker includes a popup with the constructed popup_text.## 

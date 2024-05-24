@@ -5,19 +5,18 @@ import pandas as pd
 def create_map_with_input(meteorite_data):
     n_samples = int(input("Enter the number of random samples you want to display: "))  # User enters the number of points
     
-    # Data filtering
+
     df_filtered = meteorite_data.dropna(subset=['reclat', 'reclong'])
     df_filtered = df_filtered[(df_filtered['reclat'] != 0) | (df_filtered['reclong'] != 0)]
     df_filtered['year'] = df_filtered['year'].fillna(0).astype(int)
     df_filtered = df_filtered[(df_filtered['reclat'] >= -90) & (df_filtered['reclat'] <= 90) &
                               (df_filtered['reclong'] >= -180) & (df_filtered['reclong'] <= 180)]
-    # Select random samples
+
     df_sampled = df_filtered.sample(n=min(n_samples, len(df_filtered)), random_state=None)
 
-    # Initialize the map
     m = folium.Map(location=[0, 0], zoom_start=2)
 
-    # Classification colors
+    # Classification colors but it does not work 
     classification_colors = {
         'OC': 'blue', 'CC': 'green', 'EC': 'red', 'IR': 'purple',
         'AC': 'orange', 'SI': 'darkred', 'PA': 'lightblue',
@@ -43,13 +42,13 @@ def create_map_with_input(meteorite_data):
                     "coordinates": [row['reclong'], row['reclat']]
                 }
             },
-            tooltip=row['name'],
+            tooltip=row['name'],    # Allow user to put the mouse on the point and see name without clicking on it 
             style_function=lambda x: {"color": x["properties"]["style"]["color"]}
         ).add_child(folium.Popup(popup_text))
         
         feature_group.add_child(feature)
 
-# Add search feature
+
     search = Search(
         layer=feature_group,
         search_label='name',

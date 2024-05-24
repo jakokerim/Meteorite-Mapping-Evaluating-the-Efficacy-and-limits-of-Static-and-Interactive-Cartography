@@ -32,3 +32,5 @@ def create_map(df_filtered):
             icon=folium.Icon(color=marker_color)
         ).add_to(marker_cluster)
     return m
+
+# This time we only add colors to the function

@@ -1,4 +1,4 @@
-# meteorite_classification.py
+import pandas as pd
 
 def classify_meteorites(recclass):
     """Classify meteorites based on the recclass provided."""

@@ -1,5 +1,3 @@
-# Module to check the wquality of the data 
-
 import pandas as pd
 
 class DataQuality:

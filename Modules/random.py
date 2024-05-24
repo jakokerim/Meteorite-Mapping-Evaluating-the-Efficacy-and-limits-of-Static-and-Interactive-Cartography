@@ -9,13 +9,13 @@ def display_map_with_search_bar(meteorite_data, n_points=10):
     df_filtered = df_filtered[(df_filtered['reclat'] >= -90) & (df_filtered['reclat'] <= 90) &
                               (df_filtered['reclong'] >= -180) & (df_filtered['reclong'] <= 180)]
 
-    # Sélectionner n_points aléatoires
+
     df_sampled = df_filtered.sample(n=min(n_points, len(df_filtered)), random_state=None)
 
-    # Initialisation de la carte
+
     m = folium.Map(location=[0, 0], zoom_start=2)
 
-    # Définition des couleurs de classification
+
     classification_colors = {
         'OC': 'blue', 'CC': 'green', 'EC': 'red', 'IR': 'purple',
         'AC': 'orange', 'SI': 'darkred', 'PA': 'lightblue',
@@ -23,7 +23,6 @@ def display_map_with_search_bar(meteorite_data, n_points=10):
         'Unknown': 'gray', 'Relict': 'cadetblue', 'Lunar meteorite': 'black'
     }
 
-    # Préparation et ajout des entités GeoJson à un FeatureGroup
     feature_group = folium.FeatureGroup(name="Meteorites").add_to(m)
     for idx, row in df_sampled.iterrows():
         marker_color = classification_colors.get(row['classification_group'], 'gray')
@@ -49,7 +48,6 @@ def display_map_with_search_bar(meteorite_data, n_points=10):
         feature.add_child(folium.Popup(popup_text))
         feature.add_to(feature_group)
 
-    # Ajout de la fonctionnalité de recherche
     search = Search(
         layer=feature_group,
         search_label='name',

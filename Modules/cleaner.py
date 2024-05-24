@@ -1,5 +1,3 @@
-# meteorite_cleaner.py
-
 import pandas as pd
 
 class Cleaner:
