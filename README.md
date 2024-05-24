@@ -79,6 +79,5 @@ Regular maintenance is crucial to keep the application functional and up-to-date
 ## Acknowledgements
 
 This project utilized resources and data provided by NASA and leveraged open-source tools like Jupyter, Streamlit, and Folium. Special thanks to the contributors and the research community for their support and feedback.
-=======
-# Meteorite-Mapping-Evaluating-the-Efficacy-and-limits-of-Static-and-Interactive-Cartography
+
 
