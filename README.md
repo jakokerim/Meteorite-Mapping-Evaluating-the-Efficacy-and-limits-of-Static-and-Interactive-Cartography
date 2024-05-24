@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Meteorite Mapping: Evaluating the Efficacy and Limits of Static and Interactive Cartography
 
 ## Project Overview
