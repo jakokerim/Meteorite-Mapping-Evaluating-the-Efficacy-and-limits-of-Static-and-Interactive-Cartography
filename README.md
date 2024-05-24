@@ -3,7 +3,8 @@
 ## Project Overview
 
 This project aims to enhance the study of meteorites by leveraging advanced data visualization techniques. Using NASA’s extensive meteorite landings dataset, we have created a comprehensive platform that integrates both static and interactive visualizations through Jupyter Notebooks and Streamlit. The final product is a web-based application that offers detailed insights into meteorite landings, their distribution, and their impact on Earth.
-Table of Contents
+
+## Table of Contents
 
 - Introduction
 - Dataset
@@ -13,8 +14,6 @@ Table of Contents
 - Modules
 - Results
 - Maintenance 
-- Contributing
-- License
 - Acknowledgements
 
 ## Introduction
@@ -65,10 +64,11 @@ The project includes various modules to handle different aspects of the visualiz
 - Map Generation: Functions to create different types of maps.
 - Meteorite Classification: Categorizes meteorites into broader family groups.
 
-Results
+## Results
 
 The interactive maps are generated once a file is uploaded to the application. Users can explore the results through interactive pages and select which map they want to interact with.
-Maintenance
+
+## Maintenance
 
 Regular maintenance is crucial to keep the application functional and up-to-date:
 
