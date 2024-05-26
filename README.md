@@ -36,7 +36,7 @@ The dataset used in this study is provided by NASA and is publicly available on 
 
 ## Usage
 
-In the terminal, navigate to the streamlit folder. Then use 'streamlit run Meteorites.py'. This should open a local host in your web browser.
+In the terminal, navigate to the streamlit folder. Then use 'streamlit run Meteorites.py'. Ensure that streamlit, folium, and streamlit folium are installed. This should open a local host in your web browser.
 
 Once the Streamlit application is running, it will open a local host in your web browser. The dashboard includes various features:
 
@@ -73,8 +73,7 @@ The interactive maps are generated once a file is uploaded to the application. U
 Regular maintenance is crucial to keep the application functional and up-to-date:
 
 - Update Dependencies: Periodically review and update the codebase to ensure compatibility with new versions of Folium and Streamlit.
-- Enhance Performance: Optimize the code to handle large datasets more efficiently.
-- Expand Features: Incorporate user feedback to add new functionalities and improve existing ones.
+
 
 ## Acknowledgements
 
